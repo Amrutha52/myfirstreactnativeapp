@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
 });
 */
 //we are importing two basics built in components Text and View of React Native from the react-native library.
-import * as React from "react";
+/*import * as React from "react";
 
 // Importing components from react-native library.
 import { View, Text } from "react-native";
@@ -63,6 +63,41 @@ export default function App() {
         }}>
         Hi Amrutha
       </Text>
+    </View>
+  );
+}*/
+
+//In this example,  we will create a responsive Button which displays Alert Component, using the react-native Button component.
+import * as React from "react";
+
+// Importing components from react-native library.
+import { Alert, View, StyleSheet, Button } from "react-native";
+
+export default function App() {
+
+  // Alert is used to show alert messages.
+  const onPressButton = () => {
+    Alert.alert('Welcome To My React Native Application..')
+  }
+
+  // StyleSheet is used to create styles for the components.
+  const styles = StyleSheet.create({
+    container: {
+      flex: 0.5,
+      justifyContent: 'center',
+      alignItems: 'center',
+
+    }
+  })
+
+  return (
+
+    // Using react-natives built in components.
+    <View style={styles.container}>
+
+      <Button onPress={onPressButton}
+              title="Press Me" color="yellow" />
+
     </View>
   );
 }

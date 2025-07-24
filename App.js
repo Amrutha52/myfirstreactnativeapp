@@ -1,3 +1,4 @@
+/*
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
@@ -37,4 +38,31 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
   },
 });
+*/
+//we are importing two basics built in components Text and View of React Native from the react-native library.
+import * as React from "react";
 
+// Importing components from react-native library.
+import { View, Text } from "react-native";
+
+export default function App() {
+  return (
+
+    // Using react-natives built in components.
+    <View
+      style={{
+        flex: 0.5,
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "yellow",
+      }}
+    >
+      <Text
+        style={{
+          color: "black",
+        }}>
+        Hi Amrutha
+      </Text>
+    </View>
+  );
+}

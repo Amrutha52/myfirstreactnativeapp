@@ -103,8 +103,9 @@ export default function App() {
   );
 }*/
 
-// Flat List
+//*** Flat List
 
+/*
 import React, { Component } from "react";
 import { Text, View, StyleSheet, FlatList } from "react-native";
 import { Icon } from "react-native-elements";
@@ -172,4 +173,25 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+*/
+//export default App;
+
+import React from 'react';
+import { FlatList, View, Text } from 'react-native';
+
+const MyFlatList = () => {
+  const data = [{ key: 'item1' }, { key: 'item2' }, { key: 'item3' }];
+
+  return (
+    <FlatList
+      data={data}
+      renderItem={({ item }) => (
+        <View>
+          <Text>{item.key}</Text>
+        </View>
+      )}
+    />
+  );
+};
+
+export default MyFlatList;
